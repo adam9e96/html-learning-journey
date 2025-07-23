@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>a태그,img태그</title>
+	</head>
+		<h1>a 태그</h1>
+		<!-- a태그
+		웹 페이지 내에서 다른페이지, 문서, 파일등으로 하이퍼링크를 연결하는데 사용되는 태그
+		href 속성: 링크(link)의 목적지를 가르킴
+		-->
+		<a href="https://www.google.com/">Google</a><br>
+		<a href="https://www.naver.com/">Naver</a><br>
+		<!-- a태그 target 속성값을 따로 주지 않으면 현재 페이지를 기준으로 변경됨
+		target 속성: 대표적인 a태그의 속성 중 하나로 링크된 페이지를 클릭했을 때
+		페이지가 열릴 위치를 명시한다.
+		명시하지않았을때: _self 를 target 속성값으로 가짐		
+		-->
+		<hr>
+		<h3>새창에서 열기: target="_blank"</h3>
+			<!-- 네이버를 새창으로 열기 -->
+			<a href="https://www.naver.com" target="_blank">네이버</a><br>
+			<!-- 다른 문서 열기 -->
+			<a href="2_temp.html" target="_blank">다른 HTML문서열기</a><br>
+			<!-- 다른 폴더에 있는 html 파일 열기 -->
+			<a href="../ch03_input_types/02_회원가입.html" target="_blank">ch03폴더의 회원가입폼</a>
+		<hr>
+		<h1>img 태그</h1>
+			<!-- img 태그는 src 경로의 파일을 불러온다.
+			-->
+			<img src="./img/sample.webp" width="500">
+			<h3> 이미지를 클릭하면 링크가 열리도록 하기</h3>
+			<!-- a태그를 먼저 만들고, 그 안에 img 태그를 작성 -->
+			<a href="https://www.google.com" target="_blank">
+				<img src="./img/sample.webp" width="400">
+			</a>
+		<hr>
+		<h3>HTML에 여러가지 공백을 주는 방법 </h3>
+		<!-- &nbsp; 사용하기 
+		HTML 태그 내용은 여백을 1번까지만 읽기에 2번이상의 여백이 필요한 경우
+		&nbsp;를 사용하면됨.
+		-->
+		<a href="https://www.naver.com/">
+		네   이&nbsp;&nbsp;&nbsp;버
+		</a><br>
+		<!-- 최근에 &ensp; 도 추가됨 -->
+		<a href="#" target="_blank">
+		어제&ensp;&ensp;&ensp;&ensp;문서
+		</a><br>
+		<hr>
+		
+		
+	<body>
+	</body>
+</html>
