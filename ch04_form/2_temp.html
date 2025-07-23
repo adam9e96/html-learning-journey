@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>회원가입_연습</title>
+</head>
+<body>
+  <h1>회원가입</h1>
+
+  <label><mark>아이디</mark>
+    <input type="text" name="user_id">
+  </label><br>
+
+  <label><b>비밀번호</b>
+    <input type="password" name="user_password">
+  </label><br>
+
+  <label><i>비밀번호 확인</i>
+    <input type="password" name="user_password_check">
+  </label><br>
+
+  <label>이름
+    <input type="text" name="user_name">
+  </label><br>
+
+  <hr>
+
+  <h2>인적 사항</h2>
+
+  <p>성별 (중복 불가)<br>
+    <label><input type="radio" name="gender" value="male"> 남</label>
+    <label><input type="radio" name="gender" value="female"> 여</label>
+  </p>
+
+  <p>취미 (중복 가능)<br>
+    <label><input type="checkbox" name="hobby" value="soccer"> 축구</label>
+    <label><input type="checkbox" name="hobby" value="basketball"> 농구</label>
+    <label><input type="checkbox" name="hobby" value="hockey"> 하키</label>
+  </p>
+
+  <p>지역<br>
+    <select name="region">
+      <option value="bukgu">북구</option>
+      <option value="donggu">동구</option>
+      <option value="suseonggu">수성구</option>
+      <option value="dalseogu">달서구</option>
+      <option value="seogu">서구</option>
+    </select>
+  </p>
+
+  <button type="submit">회원가입</button>
+  <button type="reset">초기화</button>
+
+	<hr>
+</body>
+</html>
