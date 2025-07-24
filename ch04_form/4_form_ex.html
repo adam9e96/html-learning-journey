@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Form 태그 연습 문제</title>
+</head>
+
+<body>
+    <!--
+        문제1. 기본 로그인 폼
+        요구 사항:
+        - 사용자 입력 필드 (text 타입)
+        - 비밀번호 입력 필드 (password 타입)
+        - 로그인 버튼
+        - 모든 필드는 필수 입력(required)
+        - form의 action은 "/login", method 는 "post"
+        -->
+    <form action="/login" method="post">
+        아이디 <input type="text" name="user_id" required><br>
+        비밀번호 <input type="password" name="user_password" required><br>
+
+        <button>로그인</button>
+    </form>
+    <hr>
+
+    <!--
+        문제2. 회원가입 폼
+        요구사항:
+        - 이름 (text)
+        - 이메일 (email)
+        - 나이 (number, 최소 18세)
+        - 성별 선택 (radio button: 남성, 여성, 기타)
+        - 가입하기 버튼
+        - 각 입력 필드에는 적절한 label 사용
+    -->
+    <form>
+        <label for="user_name">이름</label>
+        <input type="text" id="user_name" name="user_name"><br>
+        <label for="user_email">이메일</label>
+        <input type="email" id="user_email" name="user_email"><br>
+        <label for="user_age">나이</label>
+        <input type="number" id="user_age" name="user_age" min="18"><br>
+        <label for="gender">성별</label>
+        <input type="radio" id="male" name="gender" value="male">남성
+        <input type="radio" id="female" name="gender" value="female">여성
+        <input type="radio" id="other" name="gender" value="other">기타
+        <button>가입하기</button>
+    </form>
+    <hr>
+
+    <!--
+            문제3. 설문조사 폼
+            요구사항:
+            - 이름 입력 필드
+            - 만족도 점수 (1-10점 범위 슬라이더)
+            - 좋아하는 프로그래밍 언어 (다중 선택 체크박스: JavaScript, Python, Java, C++)
+            - 추가의견 (여러 줄 텍스트 영역, 최대 500자)
+            - 개인정보 수집 동의 체크박스 (필수)
+            - 제출 및 초기화 버튼
+        -->
+    <form>
+        이름 <input type="text" name="user_name"><br>
+        만족도 점수 <input type="range" min="1" max="10" step="1" name="user_happy_score"><br>
+        좋아하는 프로그래밍 언어 <br>
+        <input type="checkbox" name="programming" value="JavaScript">JavaScript
+        <input type="checkbox" name="programming" value="Python">Python
+        <input type="checkbox" name="programming" value="Java">Java
+        <input type="checkbox" name="programming" value="C++">C++
+        <br>
+        추가의견
+        <textarea name="content" maxlength="500">
+                </textarea>
+        <br>
+        개인정보 수집 동의 체크박스
+        <input type="checkbox" name="personl_agree" required>
+        <br>
+        <button type="submit">제출</button>
+        <button type="reset">초기화</button>
+    </form>
+    <hr>
+
+    <!-- 문제2 정답 -->
+    <label for="user_name">이름</label>
+    <input type="text" id="user_name" name="user_name"><br>
+
+    <label for="user_email">이메일</label>
+    <input type="email" id="user_email" name="user_email"><br>
+
+    <label for="user_age">나이</label>
+    <input type="number" id="user_age" name="user_age" min="18"><br>
+
+    <label>성별</label><br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">남성</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">여성</label>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">기타</label>
+
+    <!-- 문제3. 정답 -->
+    <form>
+        <label for="survey_name">이름</label>
+        <input type="text" id="survey_name" name="user_name"><br>
+
+        <label for="satisfaction">만족도 점수 (1-10)</label>
+        <input type="range" id="satisfaction" min="1" max="10" step="1" name="user_happy_score"><br>
+
+        <fieldset>
+            <legend>좋아하는 프로그래밍 언어</legend>
+            <input type="checkbox" id="js" name="programming" value="JavaScript">
+            <label for="js">JavaScript</label>
+            <input type="checkbox" id="python" name="programming" value="Python">
+            <label for="python">Python</label>
+            <input type="checkbox" id="java" name="programming" value="Java">
+            <label for="java">Java</label>
+            <input type="checkbox" id="cpp" name="programming" value="C++">
+            <label for="cpp">C++</label>
+        </fieldset>
+        <label for="comments">추가의견</label><br>
+        <textarea id="comments" name="content" maxlength="500" rows="4" cols="50"></textarea><br>
+
+        <input type="checkbox" id="agree" name="personal_agree" required>
+        <label for="agree">개인정보 수집 동의 (필수)</label><br>
+
+        <button type="submit">제출</button>
+        <button type="reset">초기화</button>
+    </form>
+
+</body>
+
+</html>
