@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>회원가입 - 테이블ver</title>
+</head>
+<body>
+
+  <form>
+    <table border="1" width="400" height="600" align="center">
+      <tr>
+        <td colspan="3" align="center">
+          <mark>회원 가입</mark>
+        </td>
+      </tr>
+      
+      <tr align="center">
+        <td><b>아이디</b></td>
+        <td>
+          <input type="text" name="user_name" placeholder="유저아이디입력">
+        </td>
+        <td rowspan="10">
+          <button type="reset">초기화</button>
+        </td>
+      </tr>
+      
+      <tr align="center">
+        <td><b>이름</b></td>
+        <td>
+          <input type="text" name="user" placeholder="이름">
+        </td>
+      </tr>
+      
+      <tr align="center">
+        <td><b>비밀번호</b></td>
+        <td>
+          <input type="password" name="user_password">
+        </td>
+      </tr>
+      
+      <tr align="center">
+        <td rowspan="2"><b>이메일</b></td>
+        <td>
+          <input type="email" name="user_email" placeholder="이메일입력">
+        </td>
+      </tr>
+      
+      <tr align="center">
+        <td>
+          이메일 인증:
+          <input type="email" name="email_check">
+          <button type="button">인증하기</button>
+        </td>
+      </tr>
+      
+      <tr align="center">
+        <td><b>취미</b></td>
+        <td>
+          <input type="checkbox" name="hobby" value="youtube">유튜브시청<br>
+          <input type="checkbox" name="hobby" value="soccer">축구<br>
+          <input type="checkbox" name="hobby" value="sleep">잠<br>
+          <input type="checkbox" name="hobby" value="tv">TV
+        </td>
+      </tr>
+      
+      <tr align="center">
+        <td><b>성별</b></td>
+        <td>
+          <input type="radio" name="gender" value="male">남
+          <input type="radio" name="gender" value="female">여
+        </td>
+      </tr>
+      
+      <tr align="center">
+        <td colspan="2">
+          평가하기:
+          <select name="rating">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </td>
+      </tr>
+      
+      <tr align="center">
+        <td><b>사진 제출</b></td>
+        <td>
+          <input type="file" name="photo">
+        </td>
+      </tr>
+      
+      <tr align="center">
+        <td colspan="2">
+          <button type="submit">제출하기</button>
+          <input type="button" value="취소하기">
+        </td>
+      </tr>
+    </table>
+  </form>
+
+</body>
+</html>

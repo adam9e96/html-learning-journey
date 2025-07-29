@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<!--
+table에 속성 크기를 수정하면 표전체를 기준으로 수정됨
+width, height ㅇㅇ
+200 x 70
+align : 표전체를 기준으로 정렬을 먹임
+-->
+<!--
+td에 크기를 주만 다른 줄의 같은 칸에도 크기가 강제로 변함(width)
+td에 height를 주면 표전체를 기준으로 해당 td가 값만큼 커지고
+표전체높이에 계산해서 다른 줄의 td가 줄어들수있음
+
+같은 td에 heigth는 큰값이 적용됨
+
+valign= top : 우상단 , bottom : 좌하단
+-->
+<table border="1" width="200" align="center">
+    <tr>
+        <td width="110" height="50" align="right" valign="top">1</td>
+        <td width="120" height="60" valign="bottom">2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>6</td>
+    </tr>
+    <br><br>
+</table>
+<!--
+colspan : td 병항(열)
+병합할려는 td를 줄이고 colspan 사용
+-->
+
+
+<table border="1" width="200" align="center">
+    <tr>
+        <td width="120" height="60" colspan="2">2</td>
+        <td>4</td>
+        <td>2</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td colspan="3">6</td>
+        <td>9</td>
+    </tr>
+</table>
+<br><br>
+<table border="1" width="200" align="center">
+    <tr>
+        <td>4</td>
+        <td>2</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td rowspan="2">6</td>
+        <td>9</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <!--
+         <td>2</td>
+         -->
+        <td>3</td>
+    </tr>
+</table>
+
+<table border="1" width="200" align="center">
+    <tr>
+        <td>1</td>
+
+        <td>2</td>
+
+        <td>3</td>
+        <td rowspan="3">4</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td rowspan="3">6</td>
+        <td>7</td>
+        <!--
+         <td>8</td>
+        -->
+    </tr>
+    <tr>
+        <td>9</td>
+        <!--
+        <td>8</td>
+        -->
+        <td>7</td>
+        <!--
+        <td>6</td>
+        -->
+    </tr>
+</table>
+<br>
+<br>
+<table border="1" width="200" align="center">
+    <tr>
+        <td>
+            <a href="https://www.naver.com/">네이버</a>
+        </td>
+
+        <td>
+            <img src="./img/star.jpg" width="50">
+        </td>
+
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+
+        <td>8</td>
+
+    </tr>
+    <tr>
+        <td>9</td>
+
+        <td>8</td>
+
+        <td>7</td>
+
+        <td>6</td>
+
+    </tr>
+</table>
+<hr>
+<hr>
+<br>
+
+<!--
+테이블안에 테이블이 됨(td 내용에 table 박으면됨)
+-->
+<table border="1" width="200" align="center">
+    <tr>
+        <td>
+            <table border="2">
+                <tr>
+                    <td>57</td>
+                    <td>67</td>
+                    <td>77</td>
+                </tr>
+            </table>
+        </td>
+
+        <td>2</td>
+
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+
+        <td>8</td>
+
+    </tr>
+    <tr>
+        <td>9</td>
+
+        <td>8</td>
+
+        <td>7</td>
+
+        <td>6</td>
+
+    </tr>
+</table>
+</body>
+</html>

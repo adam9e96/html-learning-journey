@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>테이블 문제</title>
+    <style>
+        th {
+            background: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 학생 성적표를 HTML 테이블로 만들기 
+        이름    | 수학 | 영어 | 과학
+        --------|------|------|------
+        김철수  |  85  |  92  |  78
+        이영희  |  90  |  88  |  95
+        박민수  |  76  |  84  |  82
+        -->
+    <table>
+        <tr>
+            <td>이름</td>
+            <td>수학</td>
+            <td>영어</td>
+            <td>과학</td>
+        </tr>
+        <tr>
+            <td>김철수</td>
+            <td>85</td>
+            <td>92</td>
+            <td>78</td>
+        </tr>
+        <tr>
+            <td>이영희</td>
+            <td>90</td>
+            <td>88</td>
+            <td>95</td>
+        </tr>
+        <tr>
+            <td>박민수</td>
+            <td>76</td>
+            <td>84</td>
+            <td>82</td>
+        </tr>
+    </table>
+    <hr>
+    <!--
+            2. 위 테이블에서 스타일 추가하기
+            - 테두리 추가(border 속성 사용)
+            - 셀 간격 조정(cellpadding, cellspacing 사용)
+            - 헤더 행의 배경색을 회색으로 으로 설정
+        -->
+    <table border="1" cellpadding="1" cellspacing="0">
+        <tr>
+            <th>이름</th>
+            <th>수학</th>
+            <th>영어</th>
+            <th>과학</th>
+        </tr>
+        <tr>
+            <td>김철수</td>
+            <td>85</td>
+            <td>92</td>
+            <td>78</td>
+        </tr>
+        <tr>
+            <td>이영희</td>
+            <td>90</td>
+            <td>88</td>
+            <td>95</td>
+        </tr>
+        <tr>
+            <td>박민수</td>
+            <td>76</td>
+            <td>84</td>
+            <td>82</td>
+        </tr>
+    </table>
+    <!--
+    문제3 복합 테이블
+    시간표 만들기
+    - 첫번째 열은 시간(1교시~5교시)
+    - 월~금요일까지의 과목을 표시
+    - 점심시간은 3교시와 4교시 사이에 모든 
+    요일에 걸쳐 표시 (colspan 사용)
+    -->
+    <table border="1">
+        <tr>
+            <td>요일</td>
+            <td>월</td>
+            <td>화</td>
+            <td>수</td>
+            <td>목</td>
+            <td>금</td>
+        </tr>
+        <tr>
+            <td>1교시</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2교시</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3교시</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="6">점심시간</td>
+        </tr>
+        <tr>
+            <td>4교시</td>
+            <td>과학</td>
+            <td>사회</td>
+            <td>체육</td>
+            <td>수학</td>
+            <td>영어</td>
+        </tr>
+        <tr>
+            <td>5교시</td>
+            <td>사회</td>
+            <td>체육</td>
+            <td>음악</td>
+            <td>영어</td>
+            <td>국어</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
