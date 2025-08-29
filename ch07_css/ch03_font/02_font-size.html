@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글꼴 스타일 - font-size</title>
+    <style>
+      /* font-size
+        - 글꼴의 크기를 지정한다.
+        문법 : font-size: 값;
+        단위 : 
+            - 절대 단위(px), pt(포인트) 등. 고정된 크기를 가짐.
+            - 상대 단위
+                - em: 부모 요소의 font-size에 대한 상적적인 크기
+                - rem: 최상위 요소의 font-size에 대한 상대적인 크기
+                - %: 부모 요소의 font-size에 대한 백분율
+                - vm, vh: 뷰포트 너비/높이에 대한 백분율
+        */
+      h1 {
+        font-size: 2em; /* 부모 요소 폰트 크기의 2배 */
+      }
+      .smaill-text {
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>셔터 아일랜드(Shutter Island, 2010)</h1>
+    <div class="smaill-text">레오나르도 디카프리오 작품</div>
+  </body>
+</html>
