@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹 폰트 정의하기</title>
+    <style>
+      /*
+              font-family 속성으로 글꼴을 지정할때 사용자 시스템에 없을 경우를 대비해서
+              글꼴을 2~3개를 지정했었다.
+              웹 폰트를 사용하면 사용자 시스템에 없는 글꼴도 사용할 수 있다.
+
+              웹 문서의 폰트는 기본적으로 사용자 시스템에 설치된 글꼴을 사용해 화면에 표시된다.
+              웹
+
+              웹 폰트(Web Font)
+              - 사용자의 컴퓨터에 해당 글꼴이 설치되어 있지 않더라도 웹 페이지에서 특정 글꼴을 사용할
+              수 있게 해주는 기술
+              - CSS 의 @font-face 규칙을 사용하여 웹 서버에 저장된 폰트 파일을 불러와 적용한다.
+
+              웹 폰트를 사용하는느 이유
+              - 디자인 일관성 유지: 사용자의 시스템 환경에 관게 없이 디자이너가 의도한 글꼴을 그대로 보여줄 수 있다.
+              - 다양한 글꼴 사용: 고딕, 명조, 손글씨체 등 다양한 글꼴을 웹에 적용하여 시각적 효과를 높일 수 있다.
+
+              웹 폰트 사용방법
+              - CSS의 @font-face 규칙을 이용한다.
+              */
+      /*
+
+              @font-face {
+                font-family: '사용할 글꼴 이름'; /* 웹 페이지에서 사용할 폰트의 이름을 지정 */
+      /* src: url('폰트파일경로.woff2') format('woff2'), url('폰트파일경로.woff') format('woff');
+                /* 폰트 파일의 경로와 포맷을 지정 */
+      /* font-weight: normal  */
+      /*  font-style: normal; /* 폰트의 스타일 */
+
+      /* 1. @font-face로 웹 폰트 정의 */
+      @font-face {
+        font-family: 'Pretendard';
+        src: local('Pretendard SemiBold'),
+          url(./fonts/Pretendard-SemiBold.woff2) format('woff2');
+      }
+      .wfont {
+        font-family: 'Pretendard', sans-serif; /* 웹 폰트 지정 */
+      }
+      p {
+        font-size: 30px; /* 글자 크기 지정*/
+      }
+    </style>
+  </head>
+  <body>
+    <p>기본 폰트 사용하기</p>
+    <p class="wfont">웹 폰트 사용하기</p>
+  </body>
+</html>

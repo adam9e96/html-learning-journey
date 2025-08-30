@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>font - color</title>
+    <style>
+      /* color
+        글자색을 지정함
+        속성값으로는 16진수나 rgb(혹은 rgba), hsl(또는 hsla) 또는 색상이름
+        color: <색상>
+        16진수: #ffff00 <-- #기호 다음에 6자리의 16진수로 표시
+        hsl: css3부터 추가된기능. hsl은 hue(색상), saturation(채도), lightness(명도)의 줄임말
+        */
+      h1 {
+        color: #0000ff; /* 16진수 표기법 */
+      }
+      p {
+        color: green; /* 색상 이름*/
+      }
+      .accent {
+        color: hsl(0, 100%, 50%); /* hsl 표기법 */
+        font-weight: bold;
+      }
+      .imp {
+        color: hsl(0, 0%, 15%);
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>레드향</h1>
+    <p>껍질에 붉은 비이 돌아 <span class="accent">레드향</span>이라 불린다.</p>
+    <p>레드향은 한라봉과 귤을 교배한 것으로</p>
+    <p>일반 귤보다 2~3배 크고, 과육이 붉고 퉁퉁하다.</p>
+    <p class="imp">지구는 우주에 떠 있는 창백한 푸른 점 하나</p>
+  </body>
+</html>
