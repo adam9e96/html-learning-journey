@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>SweetAlert2 Demo</title>
+
+    <!-- SweetAlert2 (한 줄로!) -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.23.0/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.23.0/dist/sweetalert2.min.css"/>
+
+    <style>
+        /* 둥근 모서리 */
+        .my-swal-popup { border-radius: 16px; }
+    </style>
+</head>
+<body>
+<button id="alertStart">Alert 실행</button>
+
+<script>
+    // 여기에서 '#' 제거!
+    const alertStart = document.getElementById('alertStart');
+
+    alertStart.addEventListener('click', function () {
+        Swal.fire({
+            title: 'Good job!',
+            text: 'You clicked the button!',
+            icon: 'success',
+            // 다크모드 느낌
+            background: '#1e1e1e',
+            color: '#ffffff',
+            confirmButtonText: '확인',
+            customClass: {
+                popup: 'my-swal-popup'
+            }
+        });
+    });
+</script>
+</body>
+</html>
