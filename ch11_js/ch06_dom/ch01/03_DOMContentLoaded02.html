@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      'use script';
+      document.addEventListener('DOMContentLoaded', function () {
+        const body = document.querySelector('body');
+        console.log(body);
+        const btnChangeBackground = document.querySelector(
+          'button:nth-child(1)',
+        );
+        console.log(btnChangeBackground);
+        const btnBackgroundReset = document.querySelector(
+          'button:nth-child(2)',
+        );
+        console.log(btnBackgroundReset);
+
+        let index = 0;
+        const color = [
+          'red',
+          'orange',
+          'yellow',
+          'green',
+          'blue',
+          'navy',
+          'purple',
+        ];
+        // 배경색 변경 함수
+        const colorChange = () => {
+          body.style.backgroundColor = color[index++ % color.length];
+        };
+        // 배경색 초기화 함수
+        const colorReset = () => {
+          btnChangeBackground.removeEventListener('click', colorChange); // 이벤트 제거
+          body.style.backgroundColor = ''; // 배경색 초기화
+        };
+        btnChangeBackground.addEventListener('click', colorChange);
+        btnBackgroundReset.addEventListener('click', colorReset);
+      });
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const h1 = (text) => `<h1>${text}</h1>`;
+        document.body.innerHTML += h1('DOMContentLoaded 이벤트 발생');
+      });
+    </script>
+  </head>
+  <body>
+    <button>배경색 변경</button>
+    <button>배경색 초기화</button>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>숫자형</title>
+    <script>
+      /**
+       * 2. 기본 자료형: 숫자 (number)
+       * https://ko.javascript.info/types#ref-1991
+       * 자바스크립트는 정수와 실수를 구분하지 않음.
+       * 숫자는 따옴표 없이 사용하며, 숫자에 따옴표를 붙이면 문자열 자료형이 됨.
+       *
+       * 숫자형과 관련된 연산자:
+       * + : 더하기
+       * - : 빼기
+       * * : 곱하기
+       * / : 나누기 (나누기 한 결과의 몫)
+       * % : 나머지 (나누기 한 결과의 나머지)
+       */
+      console.log(typeof 123); // number 반환
+      console.log(100); // 정수 출력
+      console.log(123.456); // 실수 출력
+
+      // 숫자 연산자 사용 예제
+      console.log(200 + 100); // 더하기: 300
+      console.log(200 - 100); // 빼기: 100
+      console.log(200 * 100); // 곱하기: 20000
+      console.log(200 / 100); // 나누기: 2
+
+      // 나머지 연산자 사용 예제
+      console.log(200 % 100); // 0 (200을 100으로 나눈 나머지)
+      console.log(200 % 99); // 2 (200을 99로 나눈 나머지)
+
+      // 실수 사용 시의 부정확성 예제
+      console.log(0.2 + 0.1); // 0.30000000000000004 (부동 소수점 연산의 특성)
+
+      // 문자열로 숫자를 사용한 예제
+      console.log('200' + '100'); // "200100" (문자열 연결)
+      console.log(typeof ('200' + '100')); // string 반환
+      console.log(200 + 100); // 300 (숫자 연산)
+    </script>
+  </head>
+  <body></body>
+</html>

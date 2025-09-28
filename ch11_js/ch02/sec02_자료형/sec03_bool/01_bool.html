@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03. 불린형</title>
+    <script>
+      /*
+       * 기본 자료형: 불리언(boolean)
+       * https://ko.javascript.info/types#ref-1994
+       * 참(true)과 거짓(false) 두 가지 값만 가지는 자료형
+       *
+       * 비교 연산자
+       * === : 양쪽이 같다.
+       * !== : 양쪽이 다르다.
+       * >   : 왼쪽이 더 크다.
+       * <   : 오른쪽이 더 크다.
+       * >=  : 왼쪽이 더 크거나 같다.
+       * <=  : 오른쪽이 더 크거나 같다.
+       *
+       * '=='도 사용할 수 있으나, 타입을 검사하지 않음.
+       */
+
+      // 비교 연산자 예제
+      console.log(1 === 2); // false - 1과 2는 같지 않다.
+      console.log(1 !== 2); // true - 1과 2는 다르다.
+      console.log(1 > 2); // false - 1은 2보다 크지 않다.
+      console.log(1 < 2); // true - 1은 2보다 작다.
+      console.log(1 >= 2); // false - 1은 2보다 크거나 같지 않다.
+      console.log(1 <= 2); // true - 1은 2보다 작거나 같다.
+
+      console.log('문자열 비교 연산자');
+
+      // 문자열 비교 연산자 예제: 사전 순서 비교
+      console.log('강아지' > '냐옹이'); // false - '강아지'는 '냐옹이'보다 사전 순서상 앞에 있다.
+      console.log('강아지' < '냐옹이'); // true - '강아지'는 '냐옹이'보다 사전 순서상 뒤에 있다.
+
+      // 논리 부정 연산자 (!)
+      // 값을 반대로 바꿈
+      console.log(!true); // false - true 의 반대는 false
+      console.log(!false); // true - false 의 반대는 true
+
+      let isGreater = 4 > 1;
+
+      alert(isGreater); // true (비교 결과: "yes")
+    </script>
+  </head>
+  <body></body>
+</html>

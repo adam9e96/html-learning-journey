@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01. typeof 연산자</title>
+    <script>
+      /*
+       * typeof 연산자
+       * typeof 연산자는 인수의 자료형을 반환함
+       * 자료형에 따라 처리 방식을 달리 하거나 변수의 자료형을 확인할때 주로 사용한다.
+       *
+       * 사용법
+       * 1. 연산자 : typeof x
+       * 2. 함수 : typeof(x)
+       * 괄호가 있든 없든 결과는 동일함
+       */
+      console.log(typeof undefined); // "undefined"
+      console.log(typeof 0); // "number"
+      console.log(typeof 10n); // "bigint"
+      console.log(typeof true); // "boolean"
+      console.log(typeof 'foo'); // "string"
+      console.log(typeof Symbol('id')); // "symbol"
+      console.log(typeof Math); // "object"
+      console.log(typeof null); // "object" (자바스크립트의 오래된 버그)
+      console.log(typeof alert); // "function" (함수도 객체의 한 종류임)
+    </script>
+  </head>
+  <body></body>
+</html>

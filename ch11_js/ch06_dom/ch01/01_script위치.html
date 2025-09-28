@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /*
+       * 자바 스크립트를 사용하는 목적은 HTML을 다루는 것.
+       * 자바 스크립트에서는 html 요소를 문서 객체 document object 를 이용해 조작을 함.
+       *
+       * 문서 객체 모델 : Document Object Model
+       * 문서 객체를 조합해서 만든 전체적인 형태.
+       *
+       */
+      'use script';
+      const h1 = (text) => `<h1>${text}</h1>`;
+    </script>
+    <script>
+      /*
+       * head 태그 내부에서 script 태그를 배치하면 body 태그에 있는 문서 객체(요소)에 접근 가능
+       * head 태그 내부의 script 태그에서 body 태그에 있는 문서에 접근하려면 화면에 문서 객체(요소)가 모두 로드된 후에 접근해야 함.
+       * window.onload 이벤트 핸들러를 이용해 화면이 모두 로드된 후에 실행할 코드를 작성
+       */
+      //   document.body.innerHTML += h1('1번째 script 태그');
+      // body 태그가 없는 시점에 body 태그를 찾고 있어서 에러 발생
+      // 해결 방법
+      // 그렇다면 DOM 을 먼저 읽어 들인 후 script 태그를 실행하도록 하면 됨.
+    </script>
+  </head>
+  <body>
+    <script>
+      document.body.innerHTML += h1('2번째 script 태그'); // 나온다 // 1
+    </script>
+    <h1>1번째 h1 태그</h1>
+    // 2
+    <script>
+      document.body.innerHTML += h1('3번째 script 태그'); // 나온다 // 3 순서
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>스타일 변경 예시</title>
+    <style>
+      .highlight {
+        color: white;
+        background-color: tomato;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="text">이 문장의 스타일이 바뀝니다.</p>
+    <button id="btn">스타일 변경</button>
+
+    <script>
+      const text = document.getElementById('text');
+      const btn = document.getElementById('btn');
+
+      btn.addEventListener('click', () => {
+        text.classList.toggle('highlight');
+      });
+    </script>
+  </body>
+</html>

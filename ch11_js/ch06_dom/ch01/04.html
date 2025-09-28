@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트 제거와 등록</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // 1. querySelector() 로 요소 선택
+        const btnClick = document.querySelector('button:nth-child(1)');
+        const btnRemove = document.querySelector('button:nth-child(2)');
+        const btnRegister = document.querySelector('button:nth-child(3)');
+        console.log(btnClick, btnRemove, btnRegister);
+
+        // 2. 클릭 버튼 이벤트 등록
+        let count = 1;
+        const alertBtn = () => alert(`${count++}번 실행됨`);
+
+        // 3. 제거 버튼 이벤트 등록 : 제거 버튼에 이벤트 핸들러 등록. 등록해야 할 이벤트의 내용이 클릭 버튼의 이벤트 제거
+        // 이벤트가 제거된 후에는 클릭 버튼을 눌러도 아무런 반응이 없음.
+        // 이벤트가 제거 되더라도 count 변수는 유지됨.
+        // 따라서 제거된 후에 다시 등록 버튼을 눌러서 이벤트를 등록하면
+        // 이전에 실행된 횟수부터 다시 시작됨.
+        const removeBtn = () => btnClick.removeEventListener('click', alertBtn);
+        // console.log(removeBtn);
+        // 4. 등록 버튼 이벤트 등록
+        const registerBtn = () => btnClick.addEventListener('click', alertBtn);
+
+        // 5. 이벤트 핸들러 등록
+        btnClick.addEventListener('click', alertBtn);
+        btnRemove.addEventListener('click', removeBtn);
+        btnRegister.addEventListener('click', registerBtn);
+      });
+    </script>
+  </head>
+  <body>
+    <button>클릭!</button>
+    <button>제거!</button>
+    <button>등록!</button>
+  </body>
+</html>

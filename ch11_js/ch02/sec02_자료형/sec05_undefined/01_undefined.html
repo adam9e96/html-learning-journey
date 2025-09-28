@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05. undefined 값</title>
+    <script>
+      /*
+       * undefined 값
+       * https://ko.javascript.info/types#ref-1996
+       * undefined는 "값이 할당되지 않음"을 나타내는 특수한 값
+       * 어느 자료형에도 속하지 않음
+       * undefined 값은 undefined 값만 포함하는 별도의 자료형을 만듬
+       * undefined는 typeof 연산자로 확인하면 "undefined"로 나옴
+       * undefined는 null과 다름.
+       * undefined는 "값이 할당되지 않음"을 의미
+       * null은 "값이 비어있음"을 의미
+       *
+       * 주로 undefined 는 변수가 아직 값이 할당되지 않았음을 나타내기 위해 사용
+       * 예: let age; // age 변수는 아직 값이 할당되지 않음, 따라서 undefined 임
+       * 혹은 함수가 값을 반환하지 않을 때 함수의 반환 값으로 사용됨
+       * 예: function doNothing() {} // 이 함수는 아무것도 반환하지 않음
+       * let result = doNothing(); // result 변수는 undefined 임
+       */
+      let age; // age 변수는 아직 값이 할당되지 않음, 따라서 undefined 임
+      console.log(age); // undefined 출력
+      console.log(typeof age); // "undefined" 출력
+      let name;
+      console.log(name);
+      function name1(params) {}
+      console.log(name1());
+      /*
+       * undefined 값을 검사하는 방법 2가지
+       * 1. typeof 연산자 사용
+       * 2. 직접 비교 (===) 사용
+       */
+    </script>
+  </head>
+  <body></body>
+</html>

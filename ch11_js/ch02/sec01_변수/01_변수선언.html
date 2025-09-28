@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>01. 자바스크립트 변수</title>
+  </head>
+  <body>
+    <h1>자바스크립트 변수 정리</h1>
+
+    <h2>1. 변수란?</h2>
+    <p>
+      - 데이터를 저장하기 위해 이름을 붙여둔 공간<br />
+      - 값이 변할 수 있음
+    </p>
+
+    <h2>2. 변수 선언 규칙</h2>
+    <ul>
+      <li>영문자, 숫자, _, $ 사용 가능</li>
+      <li>숫자로 시작할 수 없음 (예: <code>1name</code> ❌)</li>
+      <li>공백 사용 불가 (예: <code>user name</code> ❌)</li>
+      <li>대소문자 구분 (<code>user</code> ≠ <code>User</code>)</li>
+      <li>예약어(예: <code>if, for, let</code>) 사용 불가</li>
+    </ul>
+
+    <h2>3. 변수 선언 방법</h2>
+    <pre>
+1) var    → 함수 범위(function scope), 재선언 가능 (권장 ❌)
+2) let    → 블록 범위(block scope), 재선언 불가 (권장 ✅)
+3) const  → 블록 범위(block scope), 상수(값 변경 불가) (권장 ✅)
+  </pre
+    >
+
+    <h2>4. 예제</h2>
+    <script>
+      // var (오래된 방식, 재선언 가능)
+      var name = '홍길동';
+      console.log('var name:', name);
+      var name = '김철수'; // 재선언 가능
+      console.log('재선언된 name:', name);
+
+      // let (현대적 방식, 값 변경 가능)
+      let age = 25;
+      console.log('let age:', age);
+      age = 26; // 값 변경 가능
+      console.log('변경된 age:', age);
+
+      // const (상수, 값 변경 불가)
+      const PI = 3.14159;
+      console.log('const PI:', PI);
+      // PI = 3.14; // ❌ 오류 발생
+    </script>
+  </body>
+</html>
