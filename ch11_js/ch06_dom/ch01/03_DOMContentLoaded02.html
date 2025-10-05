@@ -42,8 +42,12 @@
       });
 
       document.addEventListener('DOMContentLoaded', () => {
-        const h1 = (text) => `<h1>${text}</h1>`;
-        document.body.innerHTML += h1('DOMContentLoaded 이벤트 발생');
+        const h1 = (text) => {
+          const el = document.createElement('h1');
+          el.textContent = text;
+          return el;
+        };
+        document.body.appendChild(h1('DOMContentLoaded 이벤트 발생'));
       });
     </script>
   </head>

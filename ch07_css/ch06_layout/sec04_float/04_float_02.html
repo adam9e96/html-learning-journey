@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+        }
+
+        .box1 {
+            float: left; /* 해당 요소를 왼쪽으로 배치 */
+        }
+
+        .box2 {
+            float: left; /* 해당 요소를 왼쪽으로 배치 */
+        }
+
+        .box3 {
+            float: left; /* 해당 요소를 왼쪽으로 배치 */
+        }
+    </style>
+</head>
+<body>
+<!-- div의 기본은 block속성임 -->
+<!-- float 의 사용목적은 inline속성처럼
+옆으로 배치하기 위함임 -->
+<!--
+ float 속성을 적용해도 요소의 display 속성은 inline으로 변경되지 않습니다.
+ 대신, float 속성은 블록 요소의 레이아웃 흐름을 변경하여 인라인처럼 옆으로 배치되도록 만듭니다.
+ 요소는 여전히 블록 수준(display: block;)으로 간주되지만, 문서 흐름에서 벗어나 좌우로 떠서 배치
+-->
+<div class="box1">01</div>
+<div class="box2">02</div>
+<div class="box3">03</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      /*
+        * box-sizing 속성
+        박스를 배치하기 위해서는 박스 모델의 넓이와 높이에 대한 계산이 중요.
+        박스의 넓이와 높이는 콘텐츠의 넓이와 높이만을 나타내기 때문에
+        보더와 패딩 값을 따로 계산해야 함
+
+        box-sizing : content-box
+        넓이 속성을 콘텐츠 영역 넓이값으로 사용. 기본 값.
+         */
+      div {
+        width: 300px;
+        height: 300px;
+        border: 10px solid black; /* 테두리 스타일*/
+        padding: 30px; /* 안쪽 여백 공통 지정 */
+      }
+
+      .box1 {
+        box-sizing: border-box;
+        /*
+        콘텐츠 크기는 220px
+        전체 넓이는 300px<-- 기존 콘텐츠 넓이가 마진을 제외한 박스넓이 값이 된거임
+            */
+        /* 박스의 테두리와 여백을 박스의 넓이와 높이에 포함. 넓이가 300px */
+      }
+
+      .box2 {
+        /*margin-top: 1px;*/
+        box-sizing: content-box;
+        /* 넓이 380px */
+        /*
+            기본값과 동일 넓이가 300 + (30 + 30) + (10 + 10+ = 380px
+             */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">01-border-box</div>
+    <div class="box2">02-content-box</div>
+  </body>
+</html>

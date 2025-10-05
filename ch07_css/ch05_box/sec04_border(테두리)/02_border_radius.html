@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 300px;
+        height: 100px;
+        border: green 10px solid;
+        margin: 10px;
+      }
+
+      .box1 {
+        border-radius: 30px; /* 전체 모서리를 30px로 라운드 지정 */
+      }
+
+      .box2 {
+        border-radius: 10px 20px 30px 40px;
+        /*top-left : 10px, top-right : 20pxl bottom-right: 30px, bottom-left: 40px 라운드 지정 */
+      }
+
+      .box3 {
+        border-radius: 10px 40px;
+        /*top-left : 10px, top-right : 40pxl bottom-right: 10px, bottom-left: 40px 라운드 지정 */
+      }
+
+      .box4 {
+        width: 100px;
+        height: 100px;
+        border-radius: 100px; /* 원모양 */
+      }
+
+      /*
+        * border-radius
+        네모 박스를 라운드 형태로 둥글게 만들 떄 사용.
+        라운드 지정하는 순서는 top-left, top-right; bottom-right, bottom-left
+        도는건 시계향향으로 박스와 동일한데 시작점이 다르다.
+            border-top-left-radius, border-top-right-radius, border-bottom-right-radius, border-bottom-left-radius
+         */
+    </style>
+  </head>
+  <body>
+    <div class="box1">BOX-1</div>
+    <div class="box2">BOX-2</div>
+    <div class="box3">BOX-3</div>
+    <div class="box4">BOX-4</div>
+  </body>
+</html>

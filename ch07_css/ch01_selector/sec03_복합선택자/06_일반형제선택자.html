@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>일반 형제 선택자</title>
+    <style>
+      /*
+      4. 일반 형제 선택자 ( ~ ) (Subsequent-sibling_combinator)
+      특정 요소 뒤에 오는 '모든 형제 요소'를 선택한다.
+
+      https://developer.mozilla.org/ko/docs/Web/CSS/Subsequent-sibling_combinator
+    */
+      h2 ~ p {
+        color: #f39c12;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>제목</h2>
+    <p>✅ 선택됨 - 첫 번째 형제</p>
+    <p>✅ 선택됨 - 두 번째 형제</p>
+    <div>❌ 선택 안 됨 - p가 아님</div>
+    <div><p>선택 안됨 형제 아님</p></div>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 사용자로부터 cm 단위의 숫자를 입력받음
+      const cm = Number(prompt('cm 단위의 숫자를 입력해주세요.'));
+      console.log(typeof cm); // 입력받은 값의 자료형을 출력 (number)
+
+      // 입력받은 cm 값을 inch로 변환
+      const inch = cm / 2.54;
+
+      // 변환 결과를 알림창으로 출력
+      alert(`${cm} cm은 ${inch.toFixed(2)} inch 입니다.`);
+    </script>
+  </body>
+</html>

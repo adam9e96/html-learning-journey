@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      /*
+      * 태그 선택자 + 클래스 선택자
+      * 1️. 기본 개념
+      *
+      - 태그 선택자(tag selector): HTML 태그 이름으로 요소를 선택 
+      예) h1, p, div, li 등
+      - 클래스 선택자(class selector): class 속성값으로 요소를 선택
+      예) .select, .active, .box 등 (앞에 점(.) 사용)
+      이 둘을 함께 쓰면, “특정 태그 중에서 특정 클래스 이름을 가진 요소”만 선택할 수 있음.
+      *  2️. 문법 형태
+      태그이름.클래스이름 { 스타일 규칙 }
+      예)
+      li.select { color: red; }
+      → li 태그 중 class="select"인 요소만 선택
+      3️. 적용 범위 예시
+      <h1 class="select">...</h1>  ❌ 선택되지 않음 (태그가 li가 아님)
+      <li class="select">...</li> ✅ 선택됨 (li + class="select" 일치)
+      4️. 우선순위(명시도 specificity)
+      - 태그 선택자: 낮음 (예: li)
+      - 클래스 선택자: 중간 (예: .select)
+      → 두 개를 결합하면 좀 더 “정확하게” 특정 요소를 선택 가능
+      → 예를 들어, .select { color: blue; } 와 li.select { color: red; } 가 함께 있으면,
+        li.select가 더 구체적이므로 li 요소에는 red가 적용됨.
+        5️. 활용 예시
+        p.notice { font-size: 18px; }
+        → <p class="notice">...</p> 에만 적용
+        div.box { background: lightgray; }
+       → <div class="box">...</div> 에만 적용
+      */
+      li.select {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="select">Lorem ipsum</h1>
+    <ul>
+      <li class="select">Lorem ipsum</li>
+      <li>Lorem ipsum</li>
+      <li>Lorem ipsum</li>
+      <li>Lorem ipsum</li>
+    </ul>
+  </body>
+</html>

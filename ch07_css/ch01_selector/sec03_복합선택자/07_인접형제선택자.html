@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>인접 형제 선택자</title>
+    <style>
+      /*
+      3. 인접 형제 선택자 ( + ) (Next-sibling_combinator)
+      특정 요소 바로 뒤에 오는 형제 요소 '1개만' 선택한다.
+      https://developer.mozilla.org/ko/docs/Web/CSS/Next-sibling_combinator
+    */
+      h2 + p {
+        color: #27ae60;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>제목</h2>
+    <p>✅ 선택됨 - h2 바로 뒤의 p</p>
+    <p>❌ 선택 안 됨 - 두 번째 형제</p>
+  </body>
+</html>

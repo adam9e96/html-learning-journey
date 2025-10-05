@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Titlez</title>
+    <style>
+        /*
+        background-image 속성
+
+        배경 이미지를 2개 이상 적용하는 경우 왼쪽에 위치한 이미지가 앞으로 나온다.
+        상위 레이어가 된다.
+         */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body { /* 배경 이미지를 2개 이상 적용하는 기본 방식 */
+            background-image: url("img/cat_bg.png"), url("img/land.png");
+            /*background-image: url("img/land.png"), url("img/cat_bg.png");*/
+            /* 앞의 이미지가 투명이 아니면 뒤에껀 안나오므로 그건 의미가 없음   */
+        }
+    </style>
+</head>
+<body>
+
+</body>
+</html>

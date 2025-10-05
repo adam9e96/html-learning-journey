@@ -1,49 +1,47 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <title>회원가입</title>
-    </head>
-    <body>
-        <h1>회원 가입</h1>
-        아이디: <input type="text" name="user_id" placeholder="아이디입력">
-        <button type="button" value="bb" onclick="alert('중복아님')">중복 체크</button><br>
-        비밀번호: <input type="password" name="user_password"><br>
-        비밀번호확인: <input type="password" name="user_password_check"><br>
-        나이: <input type="number" name="user_age"><br>
-        <hr>
-        <h2>인적 사항</h2>
-        성별: 
-        <input type="radio" name="gender">남성
-        <input type="radio" name="gender">여성
-        <br>
-        취미:
-        <input type="checkbox" name="hobby" value="soccer">축구
-        <input type="checkbox" name="hobby" vlaue="baseball">야구
-        <input type="checkbox" name="hobby" value="volleyball">배구
-        <br>
-        지역:
-        <select name="region">
-            <option>북구</option>
-            <option>동구</option>
-            <option>수성구</option>
-            <option>서구</option>
-            <option>남구</option>
-        </select>
-        <br>
-        <br>
-        내용:<br>
-        <textarea name="memo" cols="20" rows="8">
-            
-        </textarea>
-        <br>
-        개인정보 약관 동의:
-        <input type="checkbox" name="personal_information">
-        <br>
-        <input type="file" name="file"><br>
-        <input type="button" name="제출하기" value="제출하기"><br>
-        <button>초기화</button>
-        
-
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>회원가입</title>
+  </head>
+  <body>
+    <h1>회원 가입</h1>
+    아이디: <input type="text" name="user_id" placeholder="아이디입력" />
+    <button type="button" value="bb" onclick="alert('중복아님')">
+      중복 체크</button
+    ><br />
+    비밀번호: <input type="password" name="user_password" /><br />
+    비밀번호확인: <input type="password" name="user_password_check" /><br />
+    나이: <input type="number" name="user_age" /><br />
+    <hr />
+    <h2>인적 사항</h2>
+    성별:
+    <input type="radio" name="gender" />남성
+    <input type="radio" name="gender" />여성
+    <br />
+    취미:
+    <input type="checkbox" name="hobby" value="soccer" />축구
+    <input type="checkbox" name="hobby" vlaue="baseball" />야구
+    <input type="checkbox" name="hobby" value="volleyball" />배구
+    <br />
+    지역:
+    <select name="region">
+      <option>북구</option>
+      <option>동구</option>
+      <option>수성구</option>
+      <option>서구</option>
+      <option>남구</option>
+    </select>
+    <br />
+    <br />
+    내용:<br />
+    <textarea name="memo" cols="20" rows="8"> </textarea>
+    <br />
+    개인정보 약관 동의:
+    <input type="checkbox" name="personal_information" />
+    <br />
+    <input type="file" name="file" /><br />
+    <input type="button" name="제출하기" value="제출하기" /><br />
+    <button>초기화</button>
+  </body>
 </html>

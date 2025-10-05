@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ㅏㅐ">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        let을 이용한 변수 선언
+
+        let으로는 재선언 할 수 없다
+        하지만 let은 변수를 덮어쓰기는 가능하다
+         */
+
+      // let으로 변수 덮어 쓰기
+      let val2 = 'let 변수';
+      console.log(val2); // 'let 변수' 출력
+
+      val2 = 'let 변수 덮어 쓰기';
+      console.log(val2); // 'let 변수 덮어 쓰기' 출력
+
+      // let으로 변수 선언
+      let val3 = 'let 변수';
+      console.log(val3); // 'let 변수' 출력
+
+      // let은 재선언 불가능
+      // let val3 = 'let 변수 재선언'; // 에러 발생
+      // Uncaught SyntaxError: Identifier 'val3' has already been declared
+      // '이미 선언되어 재선언 할 수 없다'는 메시지
+
+      /*
+        이렇게 let은 var를 이용했을 때 문제가 되었던 재선언을 개선한 변수 정의 방법.
+        변수를 덮어 쓸 수는 있지만, 재선언을 방지하여 코드의 안정성을 높임.
+        덮어쓰기를 허용하는 변수를 선언할 때는 let을 이용해야 합니다.
+         */
+    </script>
+  </body>
+</html>

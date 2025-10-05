@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>min/max 예제</title>
+    <style>
+      .box {
+        background-color: lightblue;
+        padding: 20px;
+        margin: 20px auto;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      /* min-width / max-width 예제 */
+      .width-box {
+        min-width: 200px; /* 최소 200px은 유지 */
+        max-width: 600px; /* 최대 600px까지만 확장 */
+        width: 80%; /* 브라우저 너비의 80% 사용 */
+      }
+
+      /* min-height / max-height 예제 */
+      .height-box {
+        min-height: 100px; /* 최소 높이 100px */
+        max-height: 200px; /* 최대 높이 200px */
+        height: auto; /* 내용에 맞게 자동 늘어남 (단, 200px 넘으면 잘림) */
+        overflow: auto; /* 넘치는 내용 스크롤 가능 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box width-box">
+      min-width & max-width 예제 박스<br />
+      브라우저 창 크기를 줄였다 늘려보세요!<br />
+      (200px보다 작아지지 않고, 600px 이상 커지지 않음)
+    </div>
+
+    <div class="box height-box">
+      min-height & max-height 예제 박스<br /><br />
+      이 박스는 글자가 많아지면 최소 100px부터 최대 200px까지만 커집니다.<br />
+      내용이 더 많아지면 아래처럼 스크롤이 생겨요.<br /><br />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box1 {
+        width: 300px; /* 고정 넓이 */
+        height: 100px; /* 고정 높이 */
+        background-color: blue;
+      }
+
+      #box2 {
+        width: 50%; /* 가변 넓이. 현재 브라우저 창 너비의 50%를 유지 */
+        height: 100px; /* 고정 높이 */
+        background-color: green;
+      }
+
+      /*
+        [width / height 속성 정리]
+
+        1) 기본 개념
+        - 요소의 "콘텐츠 영역" 크기를 결정하는 속성
+        - 박스 모델: (Content + Padding + Border + Margin)
+        - 단, width/height는 기본적으로 content-box 기준
+          (box-sizing 속성으로 border-box로 바꿀 수 있음)
+
+        2) 값의 종류
+        - 크기(px, em, rem 등 절대/상대 단위): 
+          예) width: 300px; height: 150px;
+          → 항상 고정된 크기를 가짐
+
+        - 백분율(%):
+          width/height 값을 부모 요소의 크기를 기준으로 계산
+          예) width: 50%; 
+          → 부모의 width 절반 크기
+
+        - auto (기본값):
+          width → 부모의 레이아웃 규칙에 따라 자동 결정
+          height → 콘텐츠 양에 따라 자동으로 늘어남
+
+        3) 특징
+        - block 요소: width를 지정하지 않으면 기본적으로 부모의 100% 차지
+        - inline 요소: width/height 속성이 적용되지 않고 콘텐츠 크기만큼 차지
+        - height는 기본적으로 콘텐츠 양에 따라 자동으로 결정(auto)
+          → 따라서 보통 height는 잘 지정하지 않고 padding으로 조절하는 경우가 많음
+
+        4) box-sizing에 따른 차이
+        - content-box (기본): width = content만
+        - border-box: width = content + padding + border 포함
+          → 레이아웃 계산이 단순해짐
+
+        5) min/max 속성과 함께 사용
+        - min-width, max-width, min-height, max-height
+        - 반응형 웹에서 최소/최대 크기를 제한할 때 활용
+      */
+    </style>
+  </head>
+  <body>
+    <div class="box1">BOX-1</div>
+    <div id="box2">BOX-2</div>
+  </body>
+</html>

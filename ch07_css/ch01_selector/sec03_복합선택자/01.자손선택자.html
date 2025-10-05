@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자손 선택자</title>
+    <style>
+      /*
+      1. 자손 선택자 (공백) (" ")(Descendant_combinator)
+      부모 요소 안에 포함된 모든 하위 요소를 선택한다.
+      직계 자식뿐만 아니라 '손자, 증손자'까지 모두 포함됨.
+      https://developer.mozilla.org/ko/docs/Web/CSS/Descendant_combinator
+    */
+      section p {
+        color: #06568b;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <p>선택됨 - section의 자식</p>
+      <div>
+        <p>선택됨 - section의 손자</p>
+      </div>
+      <div>
+        <div>
+          <div>
+            <p>선택됨 - section의 손자</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <p>선택 안 됨 - section 바깥</p>
+  </body>
+</html>

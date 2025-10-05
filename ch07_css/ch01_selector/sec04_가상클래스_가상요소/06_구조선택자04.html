@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      .container {
+        width: 800px;
+        height: 70px;
+        margin: 0 auto;
+        border: 4px solid black;
+      }
+
+      li {
+        width: 150px;
+        height: 20px;
+        text-align: center;
+        list-style: none;
+        float: left;
+        padding: 10px;
+        margin: 0 5px;
+        text-decoration: none;
+        color: white; /* 텍스트의 색상을 검정색으로   */
+      }
+
+      div li:hover {
+        background-color: #ffc0cb;
+      }
+
+      div li:active {
+        background-color: #ff0000;
+      }
+
+      li:nth-child(2n) {
+        background: #808080;
+      }
+
+      li:nth-child(2n + 1) {
+        background: #000000;
+      }
+
+      div > ul > li > a {
+        text-decoration: none; /* 텍스트 꾸미기 : 밑줄 사용 안함 */
+        color: rgb(229, 57, 57); /* 텍스트의 색상을 검정색으로   */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <ul>
+        <li><a href="https://meeco.kr/ITplus/38536653">이용 안내</a></li>
+        <li><a href="https://meeco.kr/ITplus/38536653">객실 안내</a></li>
+        <li>
+          <a href="https://meeco.kr/ITplus/38536653">예약 방법 및 요금</a>
+        </li>
+        <li><a href="https://meeco.kr/ITplus/38536653">예약하기</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

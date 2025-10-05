@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>display 속성 비교</title>
+    <style>
+      .container {
+        background-color: #eee;
+        padding: 20px;
+      }
+
+      .inline-example,
+      .inline-block-example {
+        margin: 20px;
+        padding: 10px;
+        background-color: #d8dee9;
+        border: 1px solid #4c566a;
+      }
+
+      .inline-example {
+        display: inline;
+        /* width와 height를 지정해도 적용되지 않음 */
+        width: 150px;
+        height: 50px;
+      }
+
+      .inline-block-example {
+        display: inline-block;
+        /* inline-block은 width/height 지정 가능 */
+        width: 150px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 인라인 요소 -->
+      <!-- inline은 텍스트처럼 취급 → 줄바꿈 없이 옆으로 이어짐 -->
+      <!-- width/height 무시됨 → 실제 크기는 "내용(content)"에 맞춰짐 -->
+      <span class="inline-example">인라인 요소ABCDEFG</span>
+      <span class="inline-example">인라인 요소</span>
+    </div>
+
+    <div class="container">
+      <!-- 인라인 블록 요소 -->
+      <!-- inline처럼 옆으로 배치되지만 block처럼 width/height, margin, padding 모두 적용 -->
+      <div class="inline-block-example">인라인 블록 요소ABCEDFG</div>
+      <div class="inline-block-example">인라인 블록 요소</div>
+    </div>
+  </body>
+</html>

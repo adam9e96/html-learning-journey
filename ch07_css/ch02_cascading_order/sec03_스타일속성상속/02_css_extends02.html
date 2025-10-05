@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        color: rebeccapurple; /* 글자색은 상속됨 → 하위 li, ul, li 안의 텍스트까지 적용 */
+        border: 2px solid #ccc; /* border는 상속되지 않음 → 하위 요소에 자동 적용 X */
+        padding: 1em; /* padding도 상속되지 않음 → 부모에게만 적용 */
+      }
+
+      .special {
+        color: black; /* 글자색: 상속됨 → 하위 li, ul, 텍스트 전부 검정색으로 덮어씀 */
+        font-weight: bold; /* 글자 두께: 상속됨 → 하위 텍스트 전부 굵게 */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- .main 적용 -->
+    <ul class="main">
+      <!-- color: rebeccapurple 상속됨 -->
+      <li>Item One</li>
+
+      <li>
+        Item Two
+        <!-- ul에 별도 class 없음 → 부모(.main)의 color: rebeccapurple 상속 -->
+        <ul>
+          <li>2.1</li>
+          <!-- 보라색 글자 -->
+          <li>2.2</li>
+          <!-- 보라색 글자 -->
+        </ul>
+      </li>
+
+      <li>
+        Item Three
+        <!-- 여기서는 ul에 .special 클래스 적용됨 -->
+        <ul class="special">
+          <!-- color: black, font-weight: bold 가 상속 -->
+          <li>
+            3.1
+            <ul>
+              <!-- 부모 .special의 속성(color, font-weight) 상속됨 -->
+              <li>3.1.1</li>
+              <!-- 검정색, bold -->
+              <li>3.1.2</li>
+              <!-- 검정색, bold -->
+            </ul>
+          </li>
+          <li>3.2</li>
+          <!-- 검정색, bold -->
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

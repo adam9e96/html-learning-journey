@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box1 {
+        /*background-color: fuchsia;*/
+        width: 300px; /* 고정 넓이 */
+        height: 100px; /* 고정 높이 */
+        border: green 2px solid; /* 테두리 굵기는 2px, 테두리 스타일 solid, 테두리 색상 green */
+        /*border-radius: 10px;*/
+      }
+
+      .box2 {
+        width: 300px; /* 고정 넓이 */
+        height: 100px;
+        border: red dashed;
+        border-width: 1px 5px 10px 12px; /* 12시 부터 시계 방향으로 */
+      }
+
+      .box3 {
+        width: 300px; /* 고정 넓이 */
+        height: 100px;
+        border: blue 1px dotted;
+        border-bottom-width: 5px; /* 아래 테두리만 따로 지정 */
+      }
+      .box4 {
+        width: 300px; /* 고정 넓이 */
+        height: 100px;
+        border: pink dashed;
+        border-width: 5px 10px; /* (12시 6시) (3시 9시) */
+      }
+
+      /*
+         * border
+         border : 선의 굵기 선의 스타일 선의 색상: (순서는 상관 없음)
+
+         위의 속성을 개별 부여할 시 아래와 같은 속성으로 표현 가능.
+         border-width : 선의 굵기
+         border-color : 선의 색상
+         border-style : 선의 스타일
+
+         * 선의 스타일 종류 (크게 4가지)
+         none : 테두리가 나타나지 않음. 기본 설정 . 상속에 영향을 받아서 보일수있는경우에 none으로 방지함
+         solid : 테두리를 실선으로 표시
+         dashed : 테두리를 직선 형태의 점선으로 표시
+         dotted : 테두리를 도트 형태의 점선으로 표시
+
+         * 방향에 따른 개별 부여 가능
+         border-top : 위쪽 선
+         border-bottom : 아래쪽 선
+         border-left : 왼쪽 선
+         border-right : 오른쪽 선
+
+         * 사각 테두리 스타일을 각각 다르게 지정할 경우
+         border-width : border-top-width, border-right-width, border-bottom-width, border-left-width
+         ex) border-width: 1px 5px 10px 12px;
+         ex) border-width: 1px; <-- 이러면 박스의 4방향이 모두 1px
+         -> 12시 부터 시계 방향으로 외우는게 국룰
+         이렇게도 가능하다.
+         */
+    </style>
+  </head>
+  <body>
+    <div class="box1">BOX-1</div>
+    <div class="box2">BOX-2</div>
+    <div class="box3">BOX-3</div>
+    <div class="box4">BOX-4</div>
+  </body>
+</html>

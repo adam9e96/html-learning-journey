@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자식 선택자</title>
+    <style>
+      /*
+      2. 자식 선택자(Child_combinator) ( > )
+      부모의 '직계 자식 요소'만 선택한다.
+      손자나 하위 요소는 선택되지 않는다.
+      https://developer.mozilla.org/ko/docs/Web/CSS/Child_combinator
+    */
+      section > p {
+        color: #e74c3c;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <p>✅ 선택됨 - section의 직계 자식</p>
+      <p>선택될까?</p>
+      <div>
+        <p>❌ 선택 안 됨 - section의 손자</p>
+      </div>
+    </section>
+  </body>
+</html>

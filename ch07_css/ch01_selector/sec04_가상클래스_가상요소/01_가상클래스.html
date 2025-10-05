@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo-classes</title>
+    <style>
+      /*
+      6. 가상 클래스 (Pseudo-classes)
+      요소의 '상태나 조건'에 따라 선택되는 선택자.
+      사용법: 요소:상태 { 스타일 }
+
+      https://developer.mozilla.org/ko/docs/Web/CSS/Pseudo-classes
+    */
+
+      /* 마우스를 올렸을 때 */
+      button:hover {
+        background: #3498db;
+        color: #fff;
+      }
+
+      /* 포커스를 받았을 때 */
+      input:focus {
+        border: 2px solid #e74c3c;
+        outline: none;
+      }
+
+      /* 첫 번째 자식 */
+      ul li:first-child {
+        font-weight: bold;
+        color: #27ae60;
+      }
+
+      /* 홀수 번째 자식 */
+      ul li:nth-child(odd) {
+        background: #ecf0f1;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>가상 클래스 예제</h2>
+    <button>버튼에 마우스를 올려보세요</button>
+    <br /><br />
+    <input type="text" placeholder="포커스를 주세요" />
+    <br /><br />
+    <ul>
+      <li>첫 번째 (first-child)</li>
+      <li>두 번째</li>
+      <li>세 번째 (nth-child)</li>
+      <li>네 번째</li>
+    </ul>
+  </body>
+</html>

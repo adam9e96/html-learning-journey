@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>복합 선택자 조합</title>
+    <style>
+      /*
+      5. 복합 선택자 조합
+      여러 가지 선택자를 함께 사용하여 정교한 스타일 적용 가능
+    */
+      section > div p {
+        color: #16a085;
+        font-weight: bold;
+      }
+
+      article + p {
+        color: #8e44ad;
+        font-style: italic;
+      }
+
+      main h2 ~ ul {
+        background: #ecf0f1;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div>
+        <p>✅ 선택됨 - section > div 안의 p</p>
+      </div>
+    </section>
+
+    <article>아티클</article>
+    <p>✅ 선택됨 - article 바로 뒤 p</p>
+
+    <main>
+      <h2>제목</h2>
+      <ul>
+        <li>✅ 선택됨 - h2 뒤에 오는 ul</li>
+      </ul>
+    </main>
+  </body>
+</html>
